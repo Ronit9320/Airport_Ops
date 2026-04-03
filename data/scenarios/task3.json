@@ -1,0 +1,52 @@
+{
+  "task_id": "task3",
+  "name": "Multi-Crisis Holiday Peak",
+  "difficulty": "hard",
+  "max_steps": 80,
+  "time_context": {
+    "time_of_day": "06:00",
+    "day_of_week": "Wednesday",
+    "is_holiday": true
+  },
+  "runways": [
+    {"id": "runway1", "type": "dual", "status": "maintenance"},
+    {"id": "runway2", "type": "landing", "status": "free"},
+    {"id": "runway3", "type": "dual", "status": "free"}
+  ],
+  "gates": [
+    {"id": "gate_A1", "type": "pax", "status": "occupied"},
+    {"id": "gate_A2", "type": "pax", "status": "occupied"},
+    {"id": "gate_A3", "type": "pax", "status": "occupied"},
+    {"id": "gate_B1", "type": "pax", "status": "free"},
+    {"id": "gate_B2", "type": "pax", "status": "free"},
+    {"id": "gate_C1", "type": "cargo", "status": "free"},
+    {"id": "gate_M1", "type": "medical", "status": "free"},
+    {"id": "gate_I1", "type": "isolation", "status": "free"}
+  ],
+  "ground_units": {
+    "ambulances": 2,
+    "fire_trucks": 3,
+    "security_teams": 2
+  },
+  "flights": [
+    {"flight_id": "FL001", "flight_type": "army", "status": "requesting_landing", "fuel_remaining_mins": 55, "passengers": 50, "crisis": null},
+    {"flight_id": "FL002", "flight_type": "medevac", "status": "requesting_landing", "fuel_remaining_mins": 20, "passengers": 2, "crisis": null},
+    {"flight_id": "FL003", "flight_type": "medevac", "status": "requesting_landing", "fuel_remaining_mins": 18, "passengers": 3, "crisis": null},
+    {"flight_id": "FL004", "flight_type": "government", "status": "requesting_landing", "fuel_remaining_mins": 45, "passengers": 10, "crisis": null},
+    {"flight_id": "FL005", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 35, "passengers": 180, "crisis": null},
+    {"flight_id": "FL006", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 30, "passengers": 150, "crisis": null},
+    {"flight_id": "FL007", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 28, "passengers": 200, "crisis": null},
+    {"flight_id": "FL008", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 25, "passengers": 170, "crisis": null},
+    {"flight_id": "FL009", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 22, "passengers": 160, "crisis": null},
+    {"flight_id": "FL010", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 20, "passengers": 155, "crisis": null},
+    {"flight_id": "FL011", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 18, "passengers": 145, "crisis": null},
+    {"flight_id": "FL012", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 15, "passengers": 140, "crisis": null},
+    {"flight_id": "FL013", "flight_type": "cargo", "status": "requesting_landing", "fuel_remaining_mins": 50, "passengers": 0, "crisis": null},
+    {"flight_id": "FL014", "flight_type": "cargo", "status": "requesting_landing", "fuel_remaining_mins": 45, "passengers": 0, "crisis": "hijack"},
+    {"flight_id": "FL015", "flight_type": "cargo", "status": "requesting_landing", "fuel_remaining_mins": 40, "passengers": 0, "crisis": null}
+  ],
+  "crises": [
+    {"type": "hijacking", "flight_id": "FL014", "activate_step": 0},
+    {"type": "runway_fire", "flight_id": "FL005", "activate_step": 1}
+  ]
+}

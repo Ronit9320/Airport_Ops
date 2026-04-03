@@ -1,0 +1,39 @@
+{
+  "task_id": "task1",
+  "name": "Basic Priority Landing",
+  "difficulty": "easy",
+  "max_steps": 20,
+  "time_context": {
+    "time_of_day": "10:00",
+    "day_of_week": "Tuesday",
+    "is_holiday": false
+  },
+  "runways": [
+    {"id": "runway1", "type": "dual", "status": "free"},
+    {"id": "runway2", "type": "landing", "status": "free"},
+    {"id": "runway3", "type": "takeoff", "status": "free"}
+  ],
+  "gates": [
+    {"id": "gate_A1", "type": "pax", "status": "free"},
+    {"id": "gate_A2", "type": "pax", "status": "free"},
+    {"id": "gate_B1", "type": "pax", "status": "free"},
+    {"id": "gate_B2", "type": "pax", "status": "free"},
+    {"id": "gate_C1", "type": "cargo", "status": "free"},
+    {"id": "gate_M1", "type": "medical", "status": "free"}
+  ],
+  "ground_units": {
+    "ambulances": 2,
+    "fire_trucks": 3,
+    "security_teams": 2
+  },
+  "flights": [
+    {"flight_id": "FL001", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 45, "passengers": 180, "crisis": null},
+    {"flight_id": "FL002", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 40, "passengers": 150, "crisis": null},
+    {"flight_id": "FL003", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 35, "passengers": 200, "crisis": null},
+    {"flight_id": "FL004", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 30, "passengers": 170, "crisis": null},
+    {"flight_id": "FL005", "flight_type": "medevac", "status": "requesting_landing", "fuel_remaining_mins": 25, "passengers": 4, "crisis": "medical_onboard"}
+  ],
+  "crises": [
+    {"type": "medical_emergency", "flight_id": "FL005", "activate_step": 0}
+  ]
+}
