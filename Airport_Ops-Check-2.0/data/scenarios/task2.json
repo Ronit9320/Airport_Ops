@@ -1,0 +1,45 @@
+{
+  "task_id": "task2",
+  "name": "Resource Conflict with Emergency",
+  "difficulty": "medium",
+  "max_steps": 40,
+  "time_context": {
+    "time_of_day": "08:15",
+    "day_of_week": "Monday",
+    "is_holiday": false
+  },
+  "runways": [
+    {"id": "runway1", "type": "dual", "status": "maintenance"},
+    {"id": "runway2", "type": "landing", "status": "free"},
+    {"id": "runway3", "type": "dual", "status": "free"}
+  ],
+  "gates": [
+    {"id": "gate_A1", "type": "pax", "status": "occupied"},
+    {"id": "gate_A2", "type": "pax", "status": "occupied"},
+    {"id": "gate_A3", "type": "pax", "status": "occupied"},
+    {"id": "gate_B1", "type": "pax", "status": "free"},
+    {"id": "gate_B2", "type": "pax", "status": "free"},
+    {"id": "gate_C1", "type": "cargo", "status": "free"},
+    {"id": "gate_M1", "type": "medical", "status": "free"},
+    {"id": "gate_I1", "type": "isolation", "status": "free"}
+  ],
+  "ground_units": {
+    "ambulances": 2,
+    "fire_trucks": 3,
+    "security_teams": 2
+  },
+  "flights": [
+    {"flight_id": "FL001", "flight_type": "army", "status": "requesting_landing", "fuel_remaining_mins": 60, "passengers": 40, "crisis": null},
+    {"flight_id": "FL002", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 8, "passengers": 180, "crisis": null},
+    {"flight_id": "FL003", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 35, "passengers": 150, "crisis": null},
+    {"flight_id": "FL004", "flight_type": "government", "status": "requesting_landing", "fuel_remaining_mins": 50, "passengers": 12, "crisis": null},
+    {"flight_id": "FL005", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 30, "passengers": 200, "crisis": null},
+    {"flight_id": "FL006", "flight_type": "cargo", "status": "requesting_landing", "fuel_remaining_mins": 45, "passengers": 0, "crisis": "bomb_threat"},
+    {"flight_id": "FL007", "flight_type": "cargo", "status": "requesting_landing", "fuel_remaining_mins": 40, "passengers": 0, "crisis": null},
+    {"flight_id": "FL008", "flight_type": "commercial", "status": "requesting_landing", "fuel_remaining_mins": 25, "passengers": 170, "crisis": null}
+  ],
+  "crises": [
+    {"type": "fuel_emergency", "flight_id": "FL002", "activate_step": 0},
+    {"type": "bomb_threat", "flight_id": "FL006", "activate_step": 2}
+  ]
+}
